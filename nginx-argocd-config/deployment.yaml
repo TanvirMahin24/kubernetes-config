@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: react-docker
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: react-docker
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: react-docker
-        image: tanvirmahin24/static-nginx-site
+        image: tanvirmahin24/static-nginx-site:2
         resources:
             limits:
               memory: 100Mi
